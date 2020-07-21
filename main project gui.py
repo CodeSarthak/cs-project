@@ -1,6 +1,7 @@
 from tkinter.ttk import *
 from tkinter import *
 window=Tk()
+window.geometry('750x600')
 admno=Label(text='Enter your admission no.',fg='white',bg='red')
 admno.grid(column=0,row=0)
 entry1=Entry(fg='white',bg='grey',width=20)
@@ -37,5 +38,19 @@ def func():
 
 
 bt=Button(text='submit',command=func())
+
+
+    firebase = firebase.FirebaseApplication("https://python-interface-55bc7.firebaseio.com/", None)
+    data = {    
+    'Name':'Helldcibdibo',
+    'Email' :'test@gmail.com',
+    'Number': 9599499407
+     }
+    result = firebase.post("python-interface-55bc7/test", data)
+    print(result)
+
+
+bt=Button(text='submit',command=func)
+
 bt.grid(column=0,row=7)
 window.mainloop()
