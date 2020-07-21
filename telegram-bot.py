@@ -18,7 +18,7 @@ def send_welcome(message):
 def send_welcome(message):
     bot.reply_to(message, 'Type in your admission number and password in this format : [admission number] [password]. For example, 1234 massword')
 
-@bot.message_handler(func=lambda msg)
+@bot.message_handler(func=lambda msg: msg.text is not None and '@' in msg.text)
 # lambda function finds messages with the '@' sign in them
 # in case msg.text doesn't exist, the handler doesn't process it
 def at_converter(message):
