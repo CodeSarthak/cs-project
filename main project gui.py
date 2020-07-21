@@ -29,15 +29,13 @@ def func():
     akshat = str(list(result.values())[1]["Number"])
     chrome_options = Options()  
 #chrome_options.add_argument("--headless") 
-    url = "https://web.whatsapp.com/send?phone=+91"+akshat
+    # url = "https://web.whatsapp.com/send?phone=+91"+akshat
+    # driver = webdriver.Chrome(executable_path=os.path.abspath("chromedriver"),  options =  chrome_options)  
+    # driver.maximize_window()
+    # driver.get(url)
+    # username_textbox = driver.find_element_by_id("_3FRCZ copyable-text selectable-text")
 
 
-    driver = webdriver.Chrome(executable_path=os.path.abspath("chromedriver"),  options =  chrome_options)  
-    driver.maximize_window()
-    driver.get(url)
-    username_textbox = driver.find_element_by_id("_3FRCZ copyable-text selectable-text")
-
-
-bt=Button(text='submit',command=func)
+bt=Button(text='submit',command=func())
 bt.grid(column=0,row=7)
 window.mainloop()

@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 import os
 import socket
 
-number = int(input("Enter your phone numberscndb: "))
+number = int(input("Enter your phone number: "))
 
 branch = input("Which branch? (G43, G46, Saket) : ")
 
