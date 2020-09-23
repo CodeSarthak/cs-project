@@ -1,6 +1,7 @@
 import time
 import telebot
 
+
 TOKEN = "1392448049:AAHedLc3i0cqF61kubWlOiloawlt4JHY80s"
 bot = telebot.TeleBot(token=TOKEN)
 
@@ -13,6 +14,9 @@ def send_welcome(message):
 @bot.message_handler(commands=['help']) # help message handler
 def send_welcome(message):
     bot.reply_to(message, 'Type in your admission number and password in this format to get your homework : [admission number] [password]. For example, 1234 password')
+def extract_msg(message):
+   msg.append(message.text)
+   print(msg)
 while True:
     try:
         bot.polling(none_stop=True)
@@ -20,6 +24,8 @@ while True:
         # maybe there are others, therefore Exception
     except Exception:
         time.sleep(5)
+
+
 
 
 
